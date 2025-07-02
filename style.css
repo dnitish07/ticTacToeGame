@@ -87,3 +87,7 @@ body {
 .hidden {
   display: none;
 }
+.winning-cell {
+  background-color: #90ee90; /* Light green or any color you prefer */
+  transition: background-color 0.3s ease;
+}

@@ -24,6 +24,7 @@ function checkWinner() {
     const [a, b, c] = combo;
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
       gameActive = false;
+      highlightWinningCells(combo);
       displayWinner(`Congratulations, Winner is ${board[a]}`);
       return true;
     }
@@ -36,6 +37,12 @@ function checkWinner() {
   }
 
   return false;
+}
+
+function highlightWinningCells(combo) {
+  combo.forEach(index => {
+    cells[index].classList.add('winning-cell');
+  });
 }
 
 function displayWinner(message) {
