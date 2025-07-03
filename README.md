@@ -50,7 +50,7 @@ tic-tac-toe/
 ├── index.html # Main HTML structure
 ├── style.css # Game styling
 └── tictactoe.js # Game logic in JavaScript
-
+---
 
 ## 🚀 How to Run
 
