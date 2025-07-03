@@ -44,13 +44,12 @@ Build a fully functional 2-player Tic-Tac-Toe game that:
 
 ## 📦 Folder Structure
 
---- bash
-
+```
 tic-tac-toe/
 ├── index.html # Main HTML structure
 ├── style.css # Game styling
 └── tictactoe.js # Game logic in JavaScript
----
+```
 
 ## 🚀 How to Run
 
