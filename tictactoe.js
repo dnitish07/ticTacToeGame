@@ -19,7 +19,7 @@ const winnerText = document.getElementById('winnerText');
 const newGameBtn = document.getElementById('newGameBtn');
 const resetBtn = document.getElementById('resetBtn');
 
-function checkWinner() {
+function checkWin() {
   for (let combo of winningCombos) {
     const [a, b, c] = combo;
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
@@ -58,7 +58,7 @@ function handleClick(e) {
   e.target.textContent = currentPlayer;
   e.target.classList.add(currentPlayer);
 
-  if (!checkWinner()) {
+  if (!checkWin()) {
     currentPlayer = currentPlayer === 'O' ? 'X' : 'O';
   }
 }
