@@ -1,6 +1,6 @@
 let currentPlayer = 'O';
 let gameActive = true;
-const board = Array(9).fill(null);
+let board = Array(9).fill(null);
 
 const winningCombos = [
   [0,1,2],
@@ -13,15 +13,15 @@ const winningCombos = [
   [2,4,6]
 ];
 
-const cells = document.querySelectorAll('.cell');
-const winnerMsg = document.getElementById('winnerMsg');
-const winnerText = document.getElementById('winnerText');
-const newGameBtn = document.getElementById('newGameBtn');
-const resetBtn = document.getElementById('resetBtn');
+let cells = document.querySelectorAll('.cell');
+let winnerMsg = document.getElementById('winnerMsg');
+let winnerText = document.getElementById('winnerText');
+let newGameBtn = document.getElementById('newGameBtn');
+let resetBtn = document.getElementById('resetBtn');
 
 function checkWin() {
   for (let combo of winningCombos) {
-    const [a, b, c] = combo;
+    let [a, b, c] = combo;
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
       gameActive = false;
       highlightWinningCells(combo);
